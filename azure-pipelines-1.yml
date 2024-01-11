@@ -21,7 +21,7 @@ stages:
       displayName: 'Build the Docker image'
       inputs:
         containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'joym123/e2eautomationrepo12'
+        dockerRegistryEndpoint: 'joym123'
         command: 'Build an image'
         dockerFile: '**/Dockerfile'
         imageName: '$(ImageName)'
