@@ -8,7 +8,7 @@ pool:
   vmImage: 'ubuntu-latest'
  
 variables:
-  ImageName: 'wolfgangofner/microservicedemo:$(Build.BuildId)'
+  ImageName: 'joym123/e2eautomationrepo12:$(Build.BuildId)'
  
 stages:
 - stage: Build
@@ -33,7 +33,7 @@ stages:
       displayName: 'Push the Docker image to Dockerhub'
       inputs:
         containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'joym123/e2eautomationrepo12'
+        dockerRegistryEndpoint: 'joym123'
         command: 'Push an image'
         imageName: '$(ImageName)'
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
